@@ -1,0 +1,112 @@
+strong {
+  font-weight: bold;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+.skip-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skip-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 40px;
+  transform: translateY(-100%);
+  background: #000;
+  color: #fff;
+}
+.skip-nav a:focus,
+.skip-nav a:active {
+  transform: translateY(0);
+}
+.btn-prev, .btn-next {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dadcdf;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.06);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-prev:hover, .btn-next:hover {
+  background-color: #fbfbfc;
+}
+.btn-prev::before, .btn-next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: -179px -400px;
+  width: 10px;
+  height: 12px;
+  margin: auto;
+}
+.btn-prev::before { 
+  transform: rotate(180deg);
+}
+.btn-next::before {
+  background-position: -168px -400px;
+}
+.module-layout .group-header .title {
+  color: #080808;
+  display: inline-block;
+  padding-right: 7px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  vertical-align: top;
+}
+.module-layout .group-header .tab-item a[aria-selected=true] {
+  color: #080808;
+}
+
+/* sp-bg */
+.header .util-area [class*="btn-"]::before,
+.header .search-area form .btn-keyboard:hover .keyboard-text,
+.header .search-area form [class*="btn-"]::before,
+.gnb .nav-item [class*="ico-"]::before,
+.gnb .nav-item [class*="ico-"]::after,
+.gnb .nav-item .link:hover [class*="ico-"]::before,
+.btn-prev::before, .btn-next::before, 
+.sc-news .group-issue .issue-area .btn-all .ico-view,
+.sc-login .link-login::before,
+.sc-weather .group-header .link-compare::before,
+.sc-weather .time-weather .w-icon,
+.sc-widget .link-mobile .logo,
+.sc-widget .link-mobile .ico-right,
+.sc-widget .papago-area .papago-title,
+.sc-widget .papago-area .papago-img,
+.sc-widget .board.vive .board-title .ico-vive,
+.sc-stock .group-header .btn-reload,
+.sc-stock .group-content .stock-graph [class*="ico-"],
+.sc-stock .group-content .stock-item [class*="ico-"],
+.setting-module [class*="btn-"]::before,
+.footer .group-notice .ico-right {
+  background-image: url("../images/sp-bg.png");
+  background-repeat: no-repeat;
+  background-size: 433px;
+}
+
+/* sp-icons */
+.sc-shopping .group-shopping .menu-item [class*="ico-"]::after {
+  background-image: url("../images/sp-icons.png");
+  background-repeat: no-repeat;
+  background-size: 158px 137px;
+}
